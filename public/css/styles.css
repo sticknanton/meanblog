@@ -3,18 +3,71 @@
   padding: 0;
   box-sizing: border-box;
 }
-.logo{
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #62bcfa;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+header{
+  background-color: #303f9f;
+  color: #62bcfa;
+  padding-top: 0;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
+#logo,#slogan,.join,.logIn,.posts{
+  text-align: center;
+}
+#logo{
+  font-size: 6em;
+  text-shadow: 3px 3px 5px #fccdd3;
+  margin-bottom: 0;
+}
+#slogan{
+  font-size: 1.6em;
+  text-shadow: 1px 1px 3px #fccdd3;
+}
+.prompt{
+  color: #303f9f;
+  text-shadow: 1px 1px 2px #fccdd3;
+  margin-top: 25px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
+input.logger, button.handler{
+  background-color: #303f9f;
+  color: white;
+  border: none;
+}
 
-
-
-
-
-
-
+input.logger:hover,button.handler:hover{
+  color: #fccdd3;
+}
 .post-content{
   width: 50em;
-  height: 4em;
+  height: 7em;
+  text-align: left;
+  overflow: auto;
+}
+.post{
+  width: 40em;
+  min-height: 7em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #303f9f;
+  margin-bottom: 5%;
+  padding: 1%;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 6px 3px 3px #fccdd3;
+}
+.inner-post{
+  text-align: left;
 }
