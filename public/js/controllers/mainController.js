@@ -6,6 +6,7 @@ ctlr.controller('mainController', ['$scope','$http','$cookies','usersApi','posts
 
   $scope.createUser = function(user){
     usersApi.createUser(user).then(function (response) {
+      $scope.user = {};
       $scope.logIn(user.username, user.password);
     })
   }
@@ -34,10 +35,11 @@ ctlr.controller('mainController', ['$scope','$http','$cookies','usersApi','posts
       $scope.posts = response.data.posts;
     })
   }
-  $scope.setUser =function(response){
+  $scope.setUser = function(response){
     $scope.currentUser = response.config.data.username;
     $scope.logged=true;
-    $scope.username=''; $scope.password='';
+    $scope.username='';
+    $scope.password='';
   }
   $scope.cookieStuff = function (response) {
     $cookies.put('user', response.config.data.username);
