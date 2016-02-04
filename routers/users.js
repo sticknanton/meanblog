@@ -4,7 +4,6 @@ var User    =   require('../models/user');
 
 
 router.post('/', function (req, res) {
-  console.log(req.body.user);
   var userData = req.body.user;
   var user = new User(userData);
   user.save(function (err, dbUser) {
@@ -14,7 +13,6 @@ router.post('/', function (req, res) {
 
 
 router.post('/authenticate', function (req, res) {
-  console.log('auth attempt');
   var usernameTry = req.body.username;
   var passwordTry = req.body.password;
 
