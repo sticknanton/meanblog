@@ -9,7 +9,10 @@ app.use(express.static('./public'));
 app.use( bodyParser.urlencoded({extended: true}) );
 app.use( bodyParser.json() );
 app.use(cookieParser())
-mongoose.connect('mongodb://localhost/mean-blog-02')
+var mongoPath = 'mongodb://localhost/mean-blog-02';
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI||mongoPath);
+
 
 
 var users = require('./routers/users');
