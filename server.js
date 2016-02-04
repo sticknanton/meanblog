@@ -21,7 +21,7 @@ app.get('/', function(req, res){
  res.sendFile( __dirname + '/views/index.html');
 })
 
-var port = MONGOLAB_URI || 8080;
-app.listen(port, function(){
+var port = 8080;
+app.listen(process.env.PORT || port, function(){
   console.log('...listening on ' + port);
 });
