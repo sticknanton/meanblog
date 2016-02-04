@@ -6,6 +6,7 @@ app.controller('usersController', ['$scope','$http','$cookies', function ($scope
   $scope.createUser = function(user){
     $http.post(baseUrl, {user: user}).then(function (response) {
       console.log(response.data);
+      $scope.user={}
     })
   }
 
